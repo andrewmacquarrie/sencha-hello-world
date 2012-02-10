@@ -1,0 +1,5 @@
+To compile the coffeeScript into javascript, run
+  > coffee -o lib/ -c src/
+
+During development, it's a good idea to have coffeescript continually compiling into javascript by watching the coffeescript files for changes:
+  > coffee -o lib/ -c -w src/
