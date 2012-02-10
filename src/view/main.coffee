@@ -21,4 +21,10 @@ panel = Ext.create 'Ext.Panel',
     id: 'mainPanel'
   ]
 
-Ext.Viewport.add(panel);
+Ext.define 'App.view.Main',
+  extend: 'Ext.Container'
+  config:
+      fullscreen: true
+      items: [
+        panel
+      ]
