@@ -1,5 +1,5 @@
 Ext.Loader.setConfig({enabled:true});
 Ext.application({
-    name: 'Main',
-    controllers: ['Main']
+    name: 'App',
+    controllers: ['main']
 });
