@@ -1,19 +1,22 @@
 Ext.define 'App.controller.main',
   extend: 'Ext.app.Controller'
   views: [
-    'Main'
+    'MainForm'
   ]
   config:
-    refs:
-      ref: 'showName'
-      selector: '#showName'
-      
+    refs: [
+      ref: 'showForm'
+      selector: '#showForm'
+    ,
+      ref: 'nameInput'
+      selector: '#name'
+    ]
 
   init: ->
-    @getMainView().create()
     this.control
       '#showName':
         tap: this.showNameClick
 
   showNameClick: ->
-    alert("clicked")
+    form = this.getShowForm()
+    debugger

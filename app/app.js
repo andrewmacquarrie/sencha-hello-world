@@ -1,5 +1,7 @@
 Ext.Loader.setConfig({enabled:true});
 Ext.application({
     name: 'App',
-    controllers: ['main']
+    launch: function(){
+      Ext.create("App.view.Viewport")
+    }
 });
