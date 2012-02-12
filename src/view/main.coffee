@@ -3,12 +3,13 @@ form = Ext.create 'Ext.Panel',
   layout: 'vbox'
   items: [
     xtype: 'textfield'
-    name : 'name'
+    name: 'nameInput'
     label: 'Name'
   ,
     xtype: 'button'
     name: 'show'
     text: 'show'
+    id: 'showName'
   ]
 
 panel = Ext.create 'Ext.Panel',

@@ -3,5 +3,17 @@ Ext.define 'App.controller.main',
   views: [
     'Main'
   ]
+  config:
+    refs:
+      ref: 'showName'
+      selector: '#showName'
+      
+
   init: ->
     @getMainView().create()
+    this.control
+      '#showName':
+        tap: this.showNameClick
+
+  showNameClick: ->
+    alert("clicked")
