@@ -1,16 +1,14 @@
 Ext.define 'App.view.MainForm',
   extend: 'Ext.form.Panel'
-  xtype: 'mainform'
+  alias: 'widget.mainForm',
   config:
-    title: 'form'
-    iconCls: 'star'
     items: [
       xtype: 'textfield'
-      name: 'nameInput'
       label: 'Name'
+      id: 'nameInput'
+      value: 'erm'
     ,
       xtype: 'button'
-      name: 'show'
       text: 'show'
       id: 'showName'
     ]
