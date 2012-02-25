@@ -3,9 +3,15 @@ Ext.application({
     name: 'App',
     controllers: ['main'],
     launch: function() {
-  		var carousel = Ext.create('Ext.Carousel', {
+  		var panel = Ext.create('Ext.Panel', {
   		  fullscreen: true,
-  		  items: [{ xtype: 'mainForm' }]
+  		  layout: {
+  		    type: 'hbox'
+		    },
+  		  items: [
+  		    { xtype: 'mainForm', flex: 1 },
+  		    { xtype: 'nameDisplay', flex: 1 }
+  		  ]
 			});
 		}
 });

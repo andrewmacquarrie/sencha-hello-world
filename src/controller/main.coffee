@@ -2,11 +2,14 @@ Ext.define 'App.controller.main',
   extend: 'Ext.app.Controller'
   views: [
     'MainForm'
+    'NameDisplay'
   ]
   config:
     refs:
       nameInput:
         selector: 'panel > #nameInput'
+      nameOutput:
+        selector: 'panel > #nameOutput'
 
   init: ->
     this.control
@@ -15,4 +18,4 @@ Ext.define 'App.controller.main',
 
   showNameClick: ->
     name = this.getNameInput().getValue()
-    alert(name)
+    this.getNameOutput().setHtml("Hello #{name}")

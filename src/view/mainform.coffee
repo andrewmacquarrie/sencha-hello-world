@@ -6,7 +6,6 @@ Ext.define 'App.view.MainForm',
       xtype: 'textfield'
       label: 'Name'
       id: 'nameInput'
-      value: 'erm'
     ,
       xtype: 'button'
       text: 'show'
