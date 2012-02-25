@@ -4,9 +4,9 @@ Ext.define 'App.controller.main',
     'MainForm'
   ]
   config:
-    refs: [
-      {}
-    ]
+    refs:
+      nameInput:
+        selector: 'panel > #nameInput'
 
   init: ->
     this.control
@@ -14,6 +14,5 @@ Ext.define 'App.controller.main',
         tap: this.showNameClick
 
   showNameClick: ->
-    # Cheating - cant get refs to work, think you need stores first
-    name = Ext.getCmp('nameInput').getValue()
-    debugger
+    name = this.getNameInput().getValue()
+    alert(name)
